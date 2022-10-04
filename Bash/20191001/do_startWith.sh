@@ -1,0 +1,34 @@
+if [[ "$1" = "*" ]] ; then
+    #Evito cartelle vuote
+    exit 1
+fi
+#echo "$1" "$2" "$3" 
+
+if ! [[ -e "$1" ]] ; then
+    echo -e "Il file $1 non esiste" >&2
+    # le forme >&2 oppure 1>&2 sono equivalenti e indicano alla shell di redirigere quanto stampato su standard output sullo standard error.
+    #  > serve per redirigere
+    #  1 indica lo stdout (e può essere sottinteso)
+    #  & indica che quel che segue deve essere considerato come un file descriptor (non come il semplice nome di un file)
+    #  2 è il file descriptor dello sterr
+    exit 1
+fi
+
+X=0
+
+if test -d "$1"; then
+    cd "$1"
+
+    X=`ls $2* 2>/dev/null | wc -l`
+    #echo "$X è una dir"
+    if [[ $X -gt $3 ]]; then
+        echo "$PWD con X:$X" >> $4;
+    fi
+    
+    
+    for file in * ;
+    do
+       "$0" "$file" "$2" "$3" "$4"
+    done
+    
+fi

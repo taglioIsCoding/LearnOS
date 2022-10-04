@@ -1,0 +1,4 @@
+Cartella:1 X=       1 Y=       1
+Cartella:4 X=       2 Y=       1
+Cartella:2 X=       1 Y=       1
+Cartella:3 X=       1 Y=       1

@@ -1,0 +1,4 @@
+123;Pippo;Cane;1
+456;Pluto;Rossi;2
+789;Paperino;Dusck;5
+111;Minnie;Topolino;11

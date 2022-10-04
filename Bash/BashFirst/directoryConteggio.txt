@@ -1,0 +1,3 @@
+/Users/micheletagliani/Developer/C/OS/BashFirst/3
+/Users/micheletagliani/Developer/C/OS/BashFirst/4
+/Users/micheletagliani/Developer/C/OS/BashFirst/5
